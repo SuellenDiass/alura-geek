@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Caneca borboleta",
+      "price": 9.99,
+      "image": "/images/caneca-safira.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Caneca dourada",
+      "price": 12.99,
+      "image": "/images/caneca-dourada.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Caneca azul",
+      "price": 8.99,
+      "image": "/images/caneca-azul.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Caneca rosa",
+      "price": 12.99,
+      "image": "/images/caneca-rosa.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Caneca colorida",
+      "price": 12.99,
+      "image": "/images/caneca-colorida.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Caneca jardim",
+      "price": 9.99,
+      "image": "/images/caneca-jardim.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Caneca jardim",
+      "price": 10.99,
+      "image": "/images/caneca-jardim2.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Caneca frase",
+      "price": 10.99,
+      "image": "/images/caneca-frase.jpg"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "alura-geek",
+  "version": "1.0.0",
+  "description": "Objetivo do projeto geek:\r Praticar o crud: create, read, delete\r estrutura: \r cabeçalho com uma logo\r main:\r sessão de produtos e sessão formulario\r roda pe",
+  "main": "index.js",
+  "scripts": { 
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

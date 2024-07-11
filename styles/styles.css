@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #897fff;
+    --secondary-color: #dc26ff;
+    --hover-color: #897fff;
+    --border-color: darkorange;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho, .rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    background: linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%);
+    font-size: 35px;
+    width: 100%;
+}
+
+
+.logo {
+    width: 50px;
+}
+
+.titulo__rodape {
+    font-size: 15px;
+}
+
+.titulo__principal {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    margin: 20px 0 20px 25%;
+
+}
+
+.section_produtos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 50px;
+    width: 90%;
+    
+}
+
+.container__produtos {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px; */
+
+    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha em telas maiores */
+    gap: 20px;
+    flex: 1; /* Para garantir que os produtos ocupem o espaço disponível */
+     
+     
+}
+
+.container__formulario {
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    flex: 0 0 500px; /* Mantém o formulário com largura fixa */
+}
+
+.card {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 16px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 0 30px #333;
+    max-width: 200px;
+}
+
+.imagem__produto {
+    width: 100%;
+    height: auto;
+}
+
+.card_container--info {
+    margin-top: 8px;
+}
+
+.card-container__value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icone__exlusao {
+    border: 1px solid black;
+}
+
+.titulo__formulario {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.item__formulario {
+    box-shadow: 0 0 30px #333;
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.label__input {
+    margin-bottom: 30px;
+}
+
+#nome, #valor, #imagem {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 16px;
+}
+
+.botao__guardar, .botao__limpar {
+    background-color: var(--secondary-color);
+    border-radius: 24px;
+    border-width: 1px;
+    padding: 9px;
+    width: 100px;
+}
+
+.botao__guardar:hover, .botao__limpar:hover {
+    background-color: var(--hover-color);
+    border: 3px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    transform: translateY(6px);
+}
+ 

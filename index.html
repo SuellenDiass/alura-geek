@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Alura Geek</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body> 
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="/images/borboleta-logo.png" alt="Logo da Alura" >
+        </div>
+        <h1 class="titulo">Butterfly Geek</h1>
+    </header>
+    <!-- TITULO PRINCIPAL -->
+    <div class="titulo__principal">
+        <h1>Meus Produtos :</h1>
+    </div>  
+    <!-- SESSÃO PRODUTOS --> 
+    <main class="section_produtos">
+           
+        <section class="container__produtos">
+            <!-- CARDS DOS PRODUTOS SERÃO GERADOS DINAMICAMENT JS -->
+              <!-- <div class="card" data-lista>
+                <img src="/images/caneca-safira.jpg" alt="imagem produto" class="imagem__produto">
+                <div class="card_container--info">
+                    <p>Caneca borboleta</p>
+                    <div class="card-container__value">
+                        <p>Preço: R$ 9.99</p>
+                        <img src="/images/icone-excluir2.png" alt="icone-exclusao" class="icone__exlusao">
+                    </div>
+                    
+                </div>
+            </div> -->
+            <div class="container__produtos"></div>
+        </section>
+
+        <!-- SESSÃO FORMULÁRIO -->
+        <section class="container__formulario">
+            <form action="" class="item__formulario" data-formulario>
+                <div class="titulo__formulario">
+                    <h2>Formulário de Adição de Produtos</h2>
+                </div>
+                <fieldset class="label__input">
+                    <label for="nome">Nome</label>
+                    <input name="nome" id="nome" type="text" minlength="3" required>
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                <fieldset class="label__input">
+                    <label for="valor">Valor</label>
+                    <input name="valor" id="valor" type="text" required>
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                <fieldset class="label__input">
+                    <label for="imagem">Link da imagem:</label>
+                    <input name="imagem" id="imagem" type="url" accept="image/*" required>
+                    <span class="mensagem-erro"></span>
+                </fieldset>
+                <div class="botoes">
+                    <button class="botao__guardar" type="submit" name="Guardar">Guardar</button>
+                    <button class="botao__limpar" type="reset" name="Limpar">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+     <!-- RODAPÉ -->
+    <footer class="rodape">
+        <img src="/images/borboleta-logo.png" alt="Logo da Alura" class="logo">
+        <h2 class="titulo__rodape">Desenvolvido por Suellen Dias</h2> 
+        <br>
+        <span class="titulo__rodape"> -Ano 2024</span>
+    </footer>
+ 
+    <script type="module" src="script/api.js"></script>
+    <script type="module" src="script/dom.js"></script>
+    <script type="module" src="script/main.js"></script>
+
+</body>
+</html>
