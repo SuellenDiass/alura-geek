@@ -1,10 +1,10 @@
  <h1 align="center"> Projeto  Butterfly Geek</h1>
 
 <p align="center">
-    <img width="600" src="https://github.com/SuellenDiass/SuellenDiass/assets/102911341/ea47be37-4fc7-45cb-b707-836fca16d650">
-    <img width="600" src="">
-    <p align="center">Seja redirecionado à página do 
-<a href="" target="_blank">projeto</a></p>
+    <img width="600" src="https://github.com/SuellenDiass/SuellenDiass/assets/102911341/ea47be37-4fc7-45cb-b707-836fca16d650"></p>
+    
+  <p align="center">Seja redirecionado à página do 
+<a href="https://alura-geek-wine.vercel.app/" target="_blank">projeto</a></p>
 
 
 

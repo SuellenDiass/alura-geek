@@ -1,5 +1,5 @@
-/* Importa a função fetchProducts do arquivo api.js. */
-import { fetchProducts } from "./api.js";
+/* Importa as funções da API do arquivo api.js. */
+import { fetchProducts, addProduct, deleteProduct } from "./api.js";
 
 /* Declara uma variável localProducts para armazenar os produtos localmente. */
 let localProducts = [];
@@ -9,6 +9,7 @@ export const initializeProducts = async () => {
     localProducts = await fetchProducts();
     renderProducts();
 };
+
 /* Define a função createCard para criar o elemento DOM de um card de produto. */
 const createCard = (product) => {
     const productCard = document.createElement('div');
@@ -30,9 +31,7 @@ const createCard = (product) => {
     productValue.classList.add('card-container__value');
 
     const productPrice = document.createElement('p');
-     productPrice.textContent = `R$ ${product.price}`
-     /* productPrice.textContent = `Preço: R$${product.value ? product.value.toFixed(2) : 'N/A'}`; */
-
+    productPrice.textContent = `R$ ${product.price}`;
 
     const deleteButton = document.createElement('img');
     deleteButton.src = 'images/icone-excluir2.png';
@@ -46,6 +45,7 @@ const createCard = (product) => {
 
     return productCard;
 };
+
 /* Define a função renderProducts para renderizar os produtos da lista localProducts. */
 const renderProducts = () => {
     const productsContainer = document.querySelector('.container__produtos');
@@ -56,35 +56,47 @@ const renderProducts = () => {
         productsContainer.appendChild(productCard);
     });
 };
+
 /* Define a função handleAddProduct para adicionar um novo produto à lista local. */
-const handleAddProduct = (event) => {
+const handleAddProduct = async (event) => {
     event.preventDefault();
 
     const nameInput = document.querySelector('#nome');
     const valueInput = document.querySelector('#valor');
     const imageInput = document.querySelector('#imagem');
-    const errorMessage = document.querySelector('.mensagem-erro');
 
     const newProduct = {
-        id: Date.now(),
         name: nameInput.value,
-        value: parseFloat(valueInput.value), // converter o valor para número
-        image: imageInput.value // Obtém o valor do campo de URL da imagem
+        price: parseFloat(valueInput.value),
+        image: imageInput.value
     };
 
-    localProducts.push(newProduct);
-    renderProducts();
+    const addedProduct = await addProduct(newProduct);
+    if (addedProduct) {
+        localProducts.push(addedProduct);
+        renderProducts();
 
-    nameInput.value = '';
-    valueInput.value = '';
-    imageInput.value = '';
+        nameInput.value = '';
+        valueInput.value = '';
+        imageInput.value = '';
+    } else {
+        alert('Erro ao adicionar produto');
+    }
 };
-/*  Define a função handleDeleteProduct para excluir um produto da lista local. */
-const handleDeleteProduct = (productId) => {
-    localProducts = localProducts.filter(product => product.id !== productId);
-    renderProducts();
+
+/* Define a função handleDeleteProduct para excluir um produto da lista local. */
+const handleDeleteProduct = async (productId) => {
+    const success = await deleteProduct(productId);
+    if (success) {
+        localProducts = localProducts.filter(product => product.id !== productId);
+        renderProducts();
+    } else {
+        alert('Erro ao deletar produto');
+    }
 };
+
 /* Adiciona um ouvinte de evento para o formulário, chamando handleAddProduct ao enviar. */
 document.querySelector('.item__formulario').addEventListener('submit', handleAddProduct);
 
- 
+/* Inicializa a lista de produtos ao carregar a página */
+document.addEventListener('DOMContentLoaded', initializeProducts);
