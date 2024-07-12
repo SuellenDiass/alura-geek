@@ -130,6 +130,19 @@ Para garantir que o projeto seja responsivo, foram utilizadas media queries no C
 - **Interatividade**: O projeto inclui interatividade através de eventos, como a submissão do formulário para adicionar novos produtos e a exclusão de produtos existentes.
 - **Boa Prática de Código**: O código foi estruturado de maneira modular, separando responsabilidades em diferentes arquivos (`api.js` e `dom.js`), seguindo princípios de boa prática de programação.
 
+## Observações finais:
+<p>
+    <h3><img width="30" src="https://github.com/user-attachments/assets/872d1481-75c2-4d9a-899c-c98b2f12ae58"> O projeto ainda tem algumas pendências como:  </h3></p>
+ 
+- [ ] Campo formulário inserir nome aceitar somente strings
+- [ ] A API externa não aceita exclusão somente adição de produtos. Vou tentar hospedar um JSON Server no Heroku, Vercel, ou qualquer outro serviço que suporte operações de escrita.
+- [ ] Mas se você atualizar a página os card volta ao normal
+- [ ] O projeto está funcionando corretamente localmente
+- [ ]  Para gerar link API externa: https://my-json-server.typicode.com/
+- [ ]   Gerador gradiente CSS: https://cssgradient.io/
+
+  
+
 Atravé da Formação Front-end da Alura nos fez  entender e desenvolver projetos com CRUD utilizando HTML, CSS e JavaScript, aplicando boas práticas e garantindo a responsividade das aplicações.
 
 Esta Formação Front-End T6 - ONE faz parte do programa  [ONE](https://www.oracle.com/br/education/oracle-next-education/), parceria de  [Alura ](https://www.alura.com.br/), + Oracle
@@ -153,5 +166,3 @@ O curso é 100% online e totalmente gratuito, feito para quem não teve acesso �
 
 
  
-
-  
